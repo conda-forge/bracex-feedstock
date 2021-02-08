@@ -1,5 +1,5 @@
 {% set name = "bracex" %}
-{% set version = "2.1" %}
+{% set version = "2.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bracex-{{ version }}.tar.gz
-  sha256: 2d2d1b4fb868357dc0bd7680caa16c58d56ff27e5c699aab0e4b084ffbbbbbc9
+  sha256: 01f715cd0ed7a622ec8b32322e715813f7574de531f09b70f6f3b2c10f682425
 
 build:
   number: 0
