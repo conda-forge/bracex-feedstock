@@ -1,0 +1,45 @@
+schema_version: 1
+
+context:
+  version: "3.0"
+
+package:
+  name: bracex
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/b/bracex/bracex-${{ version }}.tar.gz
+  sha256: b73f718d6bd98d8419e45df02426c86e9967c179949f779340d6c3a8c83b9111
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling >=0.21.1
+    - pip
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - bracex
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: Bash style brace expander.
+  license: MIT
+  license_file: LICENSE.md
+  homepage: https://github.com/facelessuser/bracex
+
+extra:
+  recipe-maintainers:
+    - asford
+    - ocefpaf
