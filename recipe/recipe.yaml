@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "3.2"
+  version: "3.2.1"
 
 package:
   name: bracex
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/b/bracex/bracex-${{ version }}.tar.gz
-  sha256: 0a3d40bfae4caae4d3bfd0ea715874799fab711c38fd4012cc35343e815405cd
+  sha256: 07a9b2100ceecc0c24afa1a1714bf8d4a6abb43d592939455f662b682ac9baa4
 
 build:
   number: 0
